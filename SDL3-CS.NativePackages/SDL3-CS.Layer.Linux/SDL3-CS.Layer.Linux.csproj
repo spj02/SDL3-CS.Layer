@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
+        <RootNamespace>SDL3_CS.Layer.Linux</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <LangVersion>14</LangVersion>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup Label="NuGet">
+        <PackageId>SDL3-CS.Layer.Linux</PackageId>
+        <VersionPrefix>1.0.1</VersionPrefix>
+        <Title>Native Linux library for SDL3-CS.Layer</Title>
+        <Authors>Jonas S.</Authors>
+        <Company>Jonas S.</Company>
+        <Description>Native Linux library for SDL3-CS.Layer</Description>
+        <Copyright>Copyright (c) 2026 Jonas S.</Copyright>
+        <PackageProjectUrl>https://github.com/spj02/SDL3-CS.Layer</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/spj02/SDL3-CS.Layer</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>SDL;SDL3;SDL3-CS;SDL3-CS.Layer;Linux</PackageTags>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../../LICENSE" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="$(MSBuildProjectDirectory)\lib\linux-x64\**\*" Pack="true" PackagePath="runtimes\linux-x64\native\%(RecursiveDir)%(Filename)%(Extension)" />
+        <None Include="$(MSBuildProjectDirectory)\lib\linux-arm64\**\*" Pack="true" PackagePath="runtimes\linux-arm64\native\%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+</Project>

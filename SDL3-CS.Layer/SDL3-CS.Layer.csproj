@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
+        <RootNamespace>SDL3</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>14</LangVersion>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup Label="NuGet">
+        <PackageId>SDL3-CS.Layer</PackageId>
+        <VersionPrefix>1.0.1</VersionPrefix>
+        <Title>SDL3_layer C#</Title>
+        <Authors>Jonas S.</Authors>
+        <Company>Jonas S.</Company>
+        <Description>C# bindings for SDL_layer, intended for use with SDL3-CS</Description>
+        <Copyright>Copyright (c) 2026 Jonas S.</Copyright>
+        <PackageProjectUrl>https://github.com/spj02/SDL3-CS.Layer</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/spj02/SDL3-CS.Layer</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>SDL;SDL3;SDL3-CS;SDL3-CS.Layer</PackageTags>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../LICENSE" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
